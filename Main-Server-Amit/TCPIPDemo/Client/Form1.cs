@@ -51,15 +51,6 @@ namespace Client
         {
             client.WriteLineAndGetReply(massage_txt.Text, TimeSpan.FromSeconds(3));
         }
-
-        
-
-        /*private void btnConnect_Click(object sender, EventArgs e)
-        {
-          connect_btn.Enabled = false;
-          System.Net.IPAddress ip = System.Net.IPAddress.Parse(host_client_txt.Text);
-          client.Connect(host_client_txt.Text, Convert.ToInt32(port_Client_txt.Text));
-        }*/
         
     }
 }
