@@ -26,7 +26,7 @@ namespace Client
         
         private void connect_btn_Click(object sender, EventArgs e)
         {
-            connect_btn.Enabled = false;
+            //connect_btn.Enabled = false;
             
             client.Connect(host_client_txt.Text, Convert.ToInt32(port_Client_txt.Text));
         }
