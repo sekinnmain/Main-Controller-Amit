@@ -46,6 +46,7 @@ namespace TCPIPDemo
 
         private void stop_btn_Click(object sender, EventArgs e)
         {
+            status_txt.Text += "Server Closed!";
             if (server.IsStarted)
                 server.Stop();
         }
