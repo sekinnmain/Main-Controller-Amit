@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MAIN_GUI_Mangaer_window.ma_controller;
+
+namespace WindowsFormsApp24
+{
+    public partial class Feedback_wnd : Form
+    {
+
+        controller.Feedback myFeedback = new controller.Feedback();
+
+
+        public Feedback_wnd()
+        {
+            InitializeComponent();
+        }
+
+        private void Feedback_wnd_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submit_btn_Click(object sender, EventArgs e)
+        {
+            myFeedback.FeedbackComment = textBoxFeedback.Text;
+            myFeedback.RatedFeedback = Convert.ToInt32(numericRate.Value);
+            FeedbacktoXML(myFeedback);
+        }
+
+
+        public void FeedbacktoXML(controller.Feedback f)
+        {
+
+            XmlParser.XmlParserFeedback(myFeedback);
+        }
+    }
+}

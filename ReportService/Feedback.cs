@@ -7,24 +7,11 @@ namespace ReportService
 {
     class Feedback
     {
-        string customerFeedback;
-        int rateFeedback;
-
-        public Feedback(string CutomerFeedback, int RateFeedback)
+        public class Feedback
         {
-            this.customerFeedback = CutomerFeedback;
-            this.rateFeedback = RateFeedback;
-        }
+            public int RatedFeedback { get; set; }
+            public string FeedbackComment { get; set; }
 
-        
-        public string ChangeYourFeedback(string ChangedCustomerFeedback)
-        {
-            this.customerFeedback = ChangedCustomerFeedback;
-        }
-
-        public int ChangeYourRankedFeedback(int ChangedrateFeedback)
-        {
-           this.rateFeedback = ChangedrateFeedback; 
         }
     }
 }
